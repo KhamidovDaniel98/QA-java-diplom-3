@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class WebDriverFactory {
     public static WebDriver getWebDriver(String browserName) {
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver"); //для тестов в Яндекс браузере меняет название драйвера на chromedriver-114
         ChromeOptions options = new ChromeOptions();
         options.setHeadless(true);
         options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
@@ -17,7 +17,7 @@ public class WebDriverFactory {
                 return new ChromeDriver(options);
 
             case "yandex":
-                return new ChromeDriver(options.setBinary("src/test/resources/chromedriver-114"));
+                return new ChromeDriver(options.setBinary("C:/Program Files (x86)/Yandex/YandexBrowser/Application/browser.exe"));
 
             default:
                 throw new RuntimeException("Incorrect browser name");
