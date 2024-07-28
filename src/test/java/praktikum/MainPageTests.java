@@ -22,16 +22,19 @@ public class MainPageTests {
     private WebDriver driver;
     private String browserName;
     private MainPage mainPage;
-    @Parameterized.Parameters(name="Browser {0}")
+
+    @Parameterized.Parameters(name = "Browser {0}")
     public static Object[][] initParams() {
-        return new Object[][] {
+        return new Object[][]{
                 {"chrome"},
                 {"yandex"}
         };
     }
+
     public MainPageTests(String browserName) {
         this.browserName = browserName;
     }
+
     @Before
     @Step("Запуск браузера")
     public void startUp() {
@@ -39,11 +42,13 @@ public class MainPageTests {
         driver.get(Parameters.URL_MAIN_PAGE);
         mainPage = new MainPage(driver);
     }
+
     @After
     @Step("Закрытие браузера")
     public void tearDown() {
         driver.quit();
     }
+
     @Test
     @Step("Нажатие на вкладку Булки")
     @DisplayName("Проверка работы вкладки Булки в разделе с ингредиентами")
@@ -60,6 +65,7 @@ public class MainPageTests {
                 equalTo(expectedLocation)
         );
     }
+
     @Test
     @Step("Нажатие на вкладку Соусы")
     @DisplayName("Проверка работы вкладки Соусы в разделе с ингредиентами")
@@ -75,6 +81,7 @@ public class MainPageTests {
                 equalTo(expectedLocation)
         );
     }
+
     @Test
     @Step("Нажатие на вкладку Начинки")
     @DisplayName("Проверка работы вкладки Начинки в разделе с ингредиентами")

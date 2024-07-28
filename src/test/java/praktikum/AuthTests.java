@@ -33,13 +33,15 @@ public class AuthTests {
     private ForgotPasswordPage forgotPasswordPage;
     private String name, email, password;
     private ApiClient apiClient;
-    @Parameterized.Parameters(name="Browser {0}")
+
+    @Parameterized.Parameters(name = "Browser {0}")
     public static Object[][] initParams() {
-        return new Object[][] {
+        return new Object[][]{
                 {"chrome"},
                 {"yandex"}
         };
     }
+
     public AuthTests(String browserName) {
         this.browserName = browserName;
     }
@@ -64,8 +66,9 @@ public class AuthTests {
         Allure.addAttachment("Пароль", password);
 
         apiClient = new ApiClient();
-        apiClient.createUser(name, email,password);
+        apiClient.createUser(name, email, password);
     }
+
     @After
     @Step("Закрытие браузера и очистка данных")
     public void tearDown() {
@@ -82,6 +85,7 @@ public class AuthTests {
 
         authPage.waitFormSubmitted();
     }
+
     @Test
     @DisplayName("Вход по кнопке «Войти в аккаунт» на главной")
     public void authFromMainIsSuccess() {
@@ -98,6 +102,7 @@ public class AuthTests {
                 equalTo("Оформить заказ")
         );
     }
+
     @Test
     @DisplayName("Вход через кнопку «Личный кабинет»")
     public void authFromLinkToProfileIsSuccess() {
@@ -114,6 +119,7 @@ public class AuthTests {
                 equalTo("Оформить заказ")
         );
     }
+
     @Test
     @DisplayName("Вход через кнопку в форме регистрации")
     public void authLinkFromRegFormIsSuccess() {
@@ -132,6 +138,7 @@ public class AuthTests {
                 equalTo("Оформить заказ")
         );
     }
+
     @Test
     @DisplayName("Вход через кнопку в форме восстановления пароля")
     public void authLinkFromForgotPasswordFormIsSuccess() {

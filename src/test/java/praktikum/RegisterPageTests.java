@@ -28,16 +28,18 @@ public class RegisterPageTests {
     private RegisterPage registerPage;
     private String email, name, password;
 
-    @Parameterized.Parameters(name="Browser {0}")
+    @Parameterized.Parameters(name = "Browser {0}")
     public static Object[][] initParams() {
-        return new Object[][] {
+        return new Object[][]{
                 {"chrome"},
                 {"yandex"}
         };
     }
+
     public RegisterPageTests(String browserName) {
         this.browserName = browserName;
     }
+
     @Before
     @Step("Запуск браузера, подготовка тестовых данных")
     public void startUp() {

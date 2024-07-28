@@ -30,16 +30,18 @@ public class ProfilePageTests {
     private String name, email, password;
     private ApiClient apiClient;
 
-    @Parameterized.Parameters(name="Browser {0}")
+    @Parameterized.Parameters(name = "Browser {0}")
     public static Object[][] initParams() {
-        return new Object[][] {
+        return new Object[][]{
                 {"chrome"},
                 {"yandex"}
         };
     }
+
     public ProfilePageTests(String browserName) {
         this.browserName = browserName;
     }
+
     @Before
     @Step("Запуск браузера, подготовка тестовых данных")
     public void startUp() {
@@ -59,14 +61,16 @@ public class ProfilePageTests {
         Allure.addAttachment("Пароль", password);
 
         apiClient = new ApiClient();
-        apiClient.createUser(name, email,password);
+        apiClient.createUser(name, email, password);
     }
+
     @After
     @Step("Закрытие браузера и очистка данных")
     public void tearDown() {
         driver.quit();
         apiClient.deleteTestUser(email, password);
     }
+
     @Step("Процесс авторизации")
     private void authUser() {
         authPage.setEmail(email);
@@ -76,6 +80,7 @@ public class ProfilePageTests {
 
         authPage.waitFormSubmitted();
     }
+
     @Step("Переход в личный кабинет")
     private void goToProfile() {
         driver.get(Parameters.URL_LOGIN_PAGE);
@@ -86,6 +91,7 @@ public class ProfilePageTests {
         mainPage.clickLinkToProfile();
         profilePage.waitAuthFormVisible();
     }
+
     @Test
     @DisplayName("Проверка перехода по клику на «Личный кабинет»")
     public void checkLinkToProfileIsSuccess() {
@@ -99,6 +105,7 @@ public class ProfilePageTests {
                 containsString("/account/profile")
         );
     }
+
     @Test
     @DisplayName("Проверка перехода из личного кабинета по клику на «Конструктор»")
     public void checkLinkToConstructorIsSuccess() {
@@ -115,6 +122,7 @@ public class ProfilePageTests {
                 equalTo("Оформить заказ")
         );
     }
+
     @Test
     @DisplayName("Проверка перехода из личного кабинета по клику на логотип Stellar Burgers")
     public void checkLinkOnLogoIsSuccess() {
@@ -131,6 +139,7 @@ public class ProfilePageTests {
                 equalTo("Оформить заказ")
         );
     }
+
     @Test
     @DisplayName("Проверка выхода из личного кабинета по клику на кнопку Выйти")
     public void checkLinkLogOutIsSuccess() {
