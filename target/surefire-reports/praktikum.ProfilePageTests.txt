@@ -1,0 +1,140 @@
+-------------------------------------------------------------------------------
+Test set: praktikum.ProfilePageTests
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 0, Errors: 8, Skipped: 0, Time elapsed: 20.03 s <<< FAILURE! - in praktikum.ProfilePageTests
+checkLinkLogOutIsSuccess[Browser yandex](praktikum.ProfilePageTests)  Time elapsed: 0.074 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+unknown error: Failed to create Chrome process.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-EHF9D62', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.23'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x004F0B13+45059]
+	(No symbol) [0x004868A4]
+	(No symbol) [0x003814FF]
+	(No symbol) [0x003ADD4C]
+	(No symbol) [0x003AA319]
+	(No symbol) [0x003EC8FB]
+	(No symbol) [0x003EC12A]
+	(No symbol) [0x003E2AF6]
+	(No symbol) [0x003B6948]
+	(No symbol) [0x003B74CD]
+	GetHandleVerifier [0x007AF9A3+2924179]
+	GetHandleVerifier [0x008036ED+3267549]
+	GetHandleVerifier [0x00574474+584036]
+	GetHandleVerifier [0x0057B1DC+612044]
+	(No symbol) [0x0048FAB4]
+	(No symbol) [0x0048C358]
+	(No symbol) [0x0048C4F7]
+	(No symbol) [0x0047E46E]
+	BaseThreadInitThunk [0x769DFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x771C80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x771C809E+238]
+
+	at praktikum.ProfilePageTests.startUp(ProfilePageTests.java:46)
+
+checkLinkLogOutIsSuccess[Browser yandex](praktikum.ProfilePageTests)  Time elapsed: 0.074 s  <<< ERROR!
+java.lang.NullPointerException
+	at praktikum.ProfilePageTests.tearDown(ProfilePageTests.java:67)
+
+checkLinkOnLogoIsSuccess[Browser yandex](praktikum.ProfilePageTests)  Time elapsed: 0.062 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+unknown error: Failed to create Chrome process.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-EHF9D62', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.23'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x004F0B13+45059]
+	(No symbol) [0x004868A4]
+	(No symbol) [0x003814FF]
+	(No symbol) [0x003ADD4C]
+	(No symbol) [0x003AA319]
+	(No symbol) [0x003EC8FB]
+	(No symbol) [0x003EC12A]
+	(No symbol) [0x003E2AF6]
+	(No symbol) [0x003B6948]
+	(No symbol) [0x003B74CD]
+	GetHandleVerifier [0x007AF9A3+2924179]
+	GetHandleVerifier [0x008036ED+3267549]
+	GetHandleVerifier [0x00574474+584036]
+	GetHandleVerifier [0x0057B1DC+612044]
+	(No symbol) [0x0048FAB4]
+	(No symbol) [0x0048C358]
+	(No symbol) [0x0048C4F7]
+	(No symbol) [0x0047E46E]
+	BaseThreadInitThunk [0x769DFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x771C80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x771C809E+238]
+
+	at praktikum.ProfilePageTests.startUp(ProfilePageTests.java:46)
+
+checkLinkOnLogoIsSuccess[Browser yandex](praktikum.ProfilePageTests)  Time elapsed: 0.062 s  <<< ERROR!
+java.lang.NullPointerException
+	at praktikum.ProfilePageTests.tearDown(ProfilePageTests.java:67)
+
+checkLinkToProfileIsSuccess[Browser yandex](praktikum.ProfilePageTests)  Time elapsed: 0.061 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+unknown error: Failed to create Chrome process.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-EHF9D62', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.23'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x004F0B13+45059]
+	(No symbol) [0x004868A4]
+	(No symbol) [0x003814FF]
+	(No symbol) [0x003ADD4C]
+	(No symbol) [0x003AA319]
+	(No symbol) [0x003EC8FB]
+	(No symbol) [0x003EC12A]
+	(No symbol) [0x003E2AF6]
+	(No symbol) [0x003B6948]
+	(No symbol) [0x003B74CD]
+	GetHandleVerifier [0x007AF9A3+2924179]
+	GetHandleVerifier [0x008036ED+3267549]
+	GetHandleVerifier [0x00574474+584036]
+	GetHandleVerifier [0x0057B1DC+612044]
+	(No symbol) [0x0048FAB4]
+	(No symbol) [0x0048C358]
+	(No symbol) [0x0048C4F7]
+	(No symbol) [0x0047E46E]
+	BaseThreadInitThunk [0x769DFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x771C80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x771C809E+238]
+
+	at praktikum.ProfilePageTests.startUp(ProfilePageTests.java:46)
+
+checkLinkToProfileIsSuccess[Browser yandex](praktikum.ProfilePageTests)  Time elapsed: 0.061 s  <<< ERROR!
+java.lang.NullPointerException
+	at praktikum.ProfilePageTests.tearDown(ProfilePageTests.java:67)
+
+checkLinkToConstructorIsSuccess[Browser yandex](praktikum.ProfilePageTests)  Time elapsed: 0.06 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+unknown error: Failed to create Chrome process.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-EHF9D62', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.23'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x004F0B13+45059]
+	(No symbol) [0x004868A4]
+	(No symbol) [0x003814FF]
+	(No symbol) [0x003ADD4C]
+	(No symbol) [0x003AA319]
+	(No symbol) [0x003EC8FB]
+	(No symbol) [0x003EC12A]
+	(No symbol) [0x003E2AF6]
+	(No symbol) [0x003B6948]
+	(No symbol) [0x003B74CD]
+	GetHandleVerifier [0x007AF9A3+2924179]
+	GetHandleVerifier [0x008036ED+3267549]
+	GetHandleVerifier [0x00574474+584036]
+	GetHandleVerifier [0x0057B1DC+612044]
+	(No symbol) [0x0048FAB4]
+	(No symbol) [0x0048C358]
+	(No symbol) [0x0048C4F7]
+	(No symbol) [0x0047E46E]
+	BaseThreadInitThunk [0x769DFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x771C80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x771C809E+238]
+
+	at praktikum.ProfilePageTests.startUp(ProfilePageTests.java:46)
+
+checkLinkToConstructorIsSuccess[Browser yandex](praktikum.ProfilePageTests)  Time elapsed: 0.06 s  <<< ERROR!
+java.lang.NullPointerException
+	at praktikum.ProfilePageTests.tearDown(ProfilePageTests.java:67)
+
